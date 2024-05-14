@@ -1,0 +1,166 @@
+.homePageContainer {
+  position: relative;
+  height: auto;
+  width: 100%;
+  background-color: var(--dpurple);
+}
+.backGroundContainer {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  z-index: -10;
+  opacity: 0.8;
+}
+.next {
+  width: 100%;
+  position: relative;
+  background-color: #9a7760;
+}
+.herocontainer {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.lSide {
+  font-family: "MickKelly Regular";
+  padding: 0.5em;
+}
+.lSide h1 {
+  font-weight: 100;
+  font-size: 3rem;
+  color: var(--white);
+}
+.lSide p {
+  color: black;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.rSide {
+  width: 90%;
+  padding: 1em;
+}
+.rSide img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid rgb(230, 230, 162);
+}
+.searchBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 1em 0;
+}
+.searchIcon {
+  width: 35px;
+  cursor: pointer;
+}
+.searchIcon img {
+  width: 100%;
+}
+.search {
+  font-family: "Montserrat";
+  padding: 0.7em;
+  width: 85%;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+}
+input::placeholder {
+  font-size: 0.9rem;
+}
+/* Bottom */
+.customShapeDividerTop1705261492 {
+  position: stciky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.customShapeDividerTop1705261492 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.customShapeDividerTop1705261492 .shapeFill {
+  fill: #654d85;
+}
+
+
+.secondSection
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+}
+.secondSectionHeading
+{
+  text-align: center;
+  font-family: "MickKelly Regular";
+  font-size: 3.5rem;
+}
+.secondSectionHeading2
+{
+  text-align: center;
+  font-family: "MickKelly Regular";
+
+}
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .customShapeDividerTop1705261492 svg {
+    width: calc(111% + 1.3px);
+    height: 150px;
+  }
+  .herocontainer {
+    flex-direction: column;
+  }
+  .rSide {
+    width: 80%;
+  }
+  .lSide {
+    width: 100%;
+    text-align: center;
+  }
+  .searchBar {
+    justify-content: center;
+    margin: 1em auto;
+  }
+  .searchIcon {
+    margin-left: 1em;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .customShapeDividerTop1705261492 svg {
+    width: calc(126% + 1.3px);
+    height: 132px;
+  }
+  .herocontainer {
+    flex-direction: column;
+  }
+  .rSide {
+    width: 80%;
+  }
+  .lSide {
+    width: 100%;
+    text-align: center;
+  }
+  .searchBar {
+    justify-content: center;
+    margin: 1em auto;
+  }
+  .searchIcon {
+    margin-left: 1em;
+  }
+}
