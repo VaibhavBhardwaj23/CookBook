@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom"
 import styles from "./RecipeCard.module.css"
 export default function RecipeDisplayCard({recipe}) {
-    const {image,name,cuisine,difficulty,tags,prepTimeMinutes,servings} = recipe
+    const {id,image,name,cuisine,difficulty,tags,prepTimeMinutes,servings} = recipe
   return (
-  <>
+  <Link className="link" to={`/recipe/${id}`}>
      <div className={styles.cardContainer}>
    
    <div className={styles.imageBox}>
@@ -28,6 +29,6 @@ export default function RecipeDisplayCard({recipe}) {
   </div>
   
  </div>
-  </>
+  </Link>
   )
 }
