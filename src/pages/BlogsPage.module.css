@@ -1,0 +1,16 @@
+h1 
+{
+    font-family: "MickKelly Regular";
+    font-size:5rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+.blogList
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}

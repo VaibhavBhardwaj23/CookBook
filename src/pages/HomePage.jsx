@@ -3,6 +3,7 @@ import styles from './HomePage.module.css'
 import HomepageImage from "../assets/homepage_food.jpg"
 import Search from "../assets/search.png"
 import RecipeDisplayCard from '../components/RecipeDisplayCard'
+import PreLoader from "../components/PreLoader"
 import { useEffect, useState } from 'react'
 export default function HomePage() {
   const [recipes,setRecipes] = useState(null)
@@ -18,6 +19,7 @@ export default function HomePage() {
   },[])
   return (
 <>
+<PreLoader/>
 <div  className={styles.homePageContainer}>
    
    <NavBar/>

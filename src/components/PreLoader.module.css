@@ -1,0 +1,106 @@
+.preloader {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  animation: dissappear 0ms;
+  animation-delay: 2s;
+}
+.left,
+.right {
+  background-color: var(--purple);
+  height: 100%;
+  width: 50%;
+  font-family: "MickKelly Regular";
+  font-size: 2rem;
+}
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  transform: translateX(-100%);
+  animation: mymove_left 2s;
+}
+.left h1,
+.right h1 {
+  transform: rotate(270deg);
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transform: translateX(100%);
+  animation: mymove_right 2s;
+}
+
+@keyframes mymove_left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}
+@keyframes mymove_top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-110%);
+  }
+}
+@keyframes mymove_bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(110%);
+  }
+}
+@keyframes mymove_right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+.hide {
+  display: none;
+}
+
+
+@media screen and (max-width:1023px) {
+.preloader
+{
+  flex-direction: column;
+}
+.left,
+.right
+{
+  width: 100%;
+}
+.left h1,
+.right h1 {
+  transform: rotate(0deg);
+}
+.right
+{
+  justify-content: center;
+  align-items: start;
+  transform: translateX(0);
+  transform: translateY(100%);
+  animation: mymove_bottom 2s;
+}
+.left 
+{
+  transform: translateX(0);
+  transform: translateY(-100%);
+  animation: mymove_top 2s;
+}
+}

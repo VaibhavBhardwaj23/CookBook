@@ -3,14 +3,18 @@
 import { useParams } from "react-router-dom";
 import { useSearch } from "../hooks/useSearch";
 import cook from "../assets/cooking.png"
-import star from "../assets/star.png"
+import star from "../assets/star.png";
+import steps from "../assets/steps.png";
+import PreLoader from "../components/PreLoader";
 
 export default function RecipeDetails() {
     const { slug } = useParams();
     const result= useSearch(slug);
     console.log(result)
   return (
-    <div className={styles.main }>
+   <>
+   <PreLoader/>
+     <div className={styles.main }>
         <NavBar/>
         {result && 
         <>
@@ -52,24 +56,24 @@ export default function RecipeDetails() {
                     <h3>Calories Per Serving : {result.caloriesPerServing} kcal </h3>
                     <h3>Servings : {result.servings} </h3>
                 </div>
-
-            </div>
-        </div>
-        <div className={styles.steps}>
+                <div className={styles.steps}>
             <h1>Steps</h1>
             {result.instructions.map((step,idx)=>
             {
                 return(
                     <div key={idx} className={styles.stepsList}>
-                        <h2>Step {idx+1}</h2>
-                        <p>{step}</p>
+                        <p><img src={steps}/> {step}</p>
                     </div>
                 )
             })}
         </div>
+            </div>
+        </div>
+    
         </>
         }
 
     </div>
+   </>
   )
 }
