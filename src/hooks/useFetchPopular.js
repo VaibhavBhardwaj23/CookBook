@@ -10,6 +10,6 @@ export default function useFetchPopular(skip) {
             setPopularRecipes(res.recipes)
         }
         getRecipe();
-      }, [url]);
+      }, [url,skip]);
   return popularRecipes
 }

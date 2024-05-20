@@ -1,17 +1,17 @@
 import NavBar from '../components/NavBar'
 import styles from './HomePage.module.css'
 import HomepageImage from "../assets/homepage_food.jpg"
-import Search from "../assets/search.png"
 import RecipeDisplayCard from '../components/RecipeDisplayCard'
 import PreLoader from "../components/PreLoader"
 import { useEffect, useState } from 'react'
+import SearchBar from '../components/SearchBar'
 export default function HomePage() {
   const [recipes,setRecipes] = useState(null)
   
   useEffect(()=>{
     async function fetchRecipes()
     {
-      const response = await fetch('https://dummyjson.com/recipes'); 
+      const response = await fetch('https://dummyjson.com/recipes?limit=10'); 
       const res= await response.json();
       setRecipes(res.recipes)
     }
@@ -27,13 +27,7 @@ export default function HomePage() {
     <div className={styles.lSide}>
       <h1>Cooking Up a Storm, and Occasionally Burning It</h1>
       <p>Your Daily Dose of Recipes and Roasts</p>
-      <div className={styles.searchBar}>
-
-      <input className={styles.search} placeholder="Find the Missing Ingredient: (Hint: It's not your car keys)"></input>
-      <div className={styles.searchIcon}>
-        <img  src={Search}/>
-      </div>
-      </div>
+      <SearchBar/>
     </div>
     <div className={styles.rSide}>
       <img src={HomepageImage} alt='image'/>
@@ -55,7 +49,7 @@ Our Remarkable Recipes are Here!
 
 <div className={styles.secondSection}>
 
- {recipes && recipes.slice(0,10).map((recipe)=>
+ {recipes && recipes.map((recipe)=>
  {
   return <RecipeDisplayCard key={recipe.id} recipe={recipe}/>
  })}

@@ -1,0 +1,37 @@
+.main
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.heading p
+{
+font-size: 2rem;
+}
+.Pagination
+{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Pagination button
+{
+    padding: 0.2em 1em;
+    font-size: 1.3rem;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.previous 
+{
+    display: block;
+}
+.hide
+{
+    display: none;
+}

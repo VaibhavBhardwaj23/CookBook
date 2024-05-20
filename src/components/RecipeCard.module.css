@@ -10,7 +10,7 @@
 }
 .cardContainer
 {
-    min-width: 400px;
+    min-width: 350px;
     max-width: 400px;
     min-height: 300px;
     max-height: 650px;
@@ -37,8 +37,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin: 1em auto 0;
+    flex-wrap: wrap;
 }
 .tags p 
 {
