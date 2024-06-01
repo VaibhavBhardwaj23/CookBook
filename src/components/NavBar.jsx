@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import { useState } from 'react'
+import {useAuthProvider} from "../Context/AuthContext"
 
 export default function NavBar() {
 const [isMenuOpen,setMenuOpen]=useState(false)
@@ -9,6 +10,7 @@ if (isMenuOpen) {
 } else {
   document.body.classList.remove('no-scroll');
 }
+const {handleLogin,handleSignOut,isAuth}= useAuthProvider()
 
   return (
     <div className={styles.navbar}>
@@ -20,8 +22,20 @@ if (isMenuOpen) {
             <li><NavLink to={'/blogs'}>Blogs</NavLink></li>
             <li><NavLink to={'/popular'}>Popular</NavLink></li>
             <li><NavLink to={'/create'}>Create</NavLink></li>
-            <li><a className={styles.signUp}>Sign Up</a></li>
-            <li><a className={styles.login}>Log In</a></li>
+            <li><a
+              onClick={handleSignOut}
+              className={!isAuth ? `${styles.out}` : `${styles.signUp}`}
+            >
+              Sign Out
+            </a>
+          </li>
+          <li>
+            <a
+              className={isAuth ?` ${styles.out}` : `${styles.login}`}
+              onClick={handleLogin}
+            >
+              Log In
+              </a></li>
         </ul>
         </nav>
 
