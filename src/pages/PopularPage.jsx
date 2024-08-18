@@ -4,6 +4,7 @@ import useFetchPopular from "../hooks/useFetchPopular"
 import { useState } from "react"
 import PreLoader from "../components/PreLoader"
 import RecipeDisplayCard from "../components/RecipeDisplayCard"
+import Spinner from "../components/Spinner"
 export default function PopularPage() {
 
     const [skip,setSkip]=useState(0)
@@ -28,7 +29,7 @@ const handlePaginationPrevious=()=>
         <NavBar/>
         <h1 className={style.heading}>Most Wanted <p>Our Recipes That Keep You Coming Back for More</p></h1>
         <div className={style.main}>
-            {result && result.map((recipe)=>
+            {!result? <Spinner/>:result && result.map((recipe)=>
             {
                 return <RecipeDisplayCard key={recipe} recipe={recipe}/>
             }) }

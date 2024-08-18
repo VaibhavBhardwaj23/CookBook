@@ -1,0 +1,16 @@
+.userRecipeContainer
+{
+   display: flex; width: 90%;
+   margin: auto;
+   flex-wrap: wrap;
+}
+.head 
+{
+    font-size: 3.5em;
+    text-align: center;
+}
+.desc
+{
+    text-align: center;
+    font-size: 1.3rem;
+}

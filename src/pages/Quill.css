@@ -1,0 +1,61 @@
+.quill {
+    background: white;
+    margin: 1em auto;
+    max-width: 1001px;
+   min-height: 500px;
+}
+.titleBox
+{
+    margin: 1em auto;
+    max-width: 1001px;   
+}
+.titleBox input 
+{
+    width: 100%;
+    padding: 0.3em;
+}
+.ql-toolbar.ql-snow .ql-formats {
+    margin-right: 15px;
+    font-family: 'Montserrat';
+}
+.blogPostBtn
+{
+    padding: 0.6em 1em;
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    margin: auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background-color:#5fd068;
+    cursor: pointer;
+    color: white;
+}
+.textEditor
+{
+    padding-bottom: 3em;
+    width: 90%;
+    margin: auto;
+}
+.textEditor h1 
+{
+    text-align: center;
+  margin-top: 20px;
+  font-size: 1.9rem;
+}
+.ql-editor p, .ql-editor ol, .ql-editor ul, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6
+{
+    color: black;
+    font-family: "Montserrat";
+}
+.ql-editor
+{
+    height: 500px;
+}
+.ql-editor p
+{
+    font-size: 1em;
+}

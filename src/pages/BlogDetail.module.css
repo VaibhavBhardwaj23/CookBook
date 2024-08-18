@@ -1,0 +1,36 @@
+.review p 
+{
+    font-size: 1.2rem;
+}
+.review h2 
+{
+    font-size: 2rem;
+    color: white;
+    font-family: "Montserrat";
+}
+.review h1 
+{
+    font-size: 4em;
+}
+.review ol 
+{
+    line-height: 2;
+    color: white;
+    font-family: "Montserrat";
+    margin: 1em;
+}
+.review
+{
+    max-width: 1100px;
+    margin: 1em auto;
+}
+.review img 
+{
+    width: 100%;
+    padding: 2em;
+    
+}
+.author
+{
+    text-align: center;
+}

@@ -1,48 +1,148 @@
-
-
 /* Create Blog Post Component */
-.create .heading{
+.heading h1 {
   text-align: center;
-  font-size: 22px;
   margin-top: 20px;
+  font-size: 1.9rem;
 }
 
-.createPost{
+.createPost {
   display: flex;
+  max-width: 1000px;
+  margin: auto;
   flex-direction: column;
-  max-width: 700px;
-  margin: 20px auto;
 }
 
-.createPost .title{
+.createPost .title {
+  font-size: 15px;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: #f2ebe9 0px 1px 4px;
+}
+input:focus {
+  outline: none;
+}
+
+.createPost .description {
   font-size: 20px;
   margin: 10px 0px;
   padding: 10px;
   border-radius: 5px;
   border: 0px;
-  box-shadow: #F2EBE9 0px 1px 4px;
-
-}
-
-.createPost .description{
-  font-size: 20px;
-  margin: 10px 0px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 0px;
-  box-shadow: #F2EBE9 0px 1px 4px;
+  box-shadow: #f2ebe9 0px 1px 4px;
   height: 300px;
 }
 
-.createPost button{
+.createPost button {
   font-size: 18px;
   margin: 10px 0px;
   padding: 15px 20px;
-  background-color: #5FD068;
+  background-color: #5fd068;
   border: 0px;
   border-radius: 5px;
   color: #ffffff;
   cursor: pointer;
 }
+input {
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+.prep,
+.cuisine,
+.mealType,
+.servingSize,
+.difficulty,
+.calories {
+  padding: 10px;
+  max-width: 150px;
+}
+.miscellaneous {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.steps {
+  padding: 10px;
+}
+.stepsList {
+  margin: 0.3em 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--dgreen);
+}
 
+.ingredientsContainer {
+  display: flex;
+  margin: 1em 0;
+  gap: 10px;
+}
 
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 400;
+  margin: 1em 0 0;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 10px;
+}
+.filesInput {
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  outline: 1px solid;
+  margin-right: 1em;
+}
+:global(#fileUpload) {
+  color: white;
+}
+input[type="file"] {
+  display: none;
+}
+.files {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fileName {
+  text-decoration: underline;
+}
+.preloader {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.329);
+}
+.hide {
+  display: none;
+}
+.preview {
+  width: 100%;
+}
+
+.create
+{
+  width: 90%;
+  margin: auto;
+}

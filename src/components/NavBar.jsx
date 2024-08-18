@@ -22,6 +22,7 @@ const {handleLogin,handleSignOut,isAuth}= useAuthProvider()
             <li><NavLink to={'/blogs'}>Blogs</NavLink></li>
             <li><NavLink to={'/popular'}>Popular</NavLink></li>
             <li><NavLink to={'/create'}>Create</NavLink></li>
+            <li><NavLink to={'/tasty-trades'}>Tasty Trades</NavLink></li>
             <li><a
               onClick={handleSignOut}
               className={!isAuth ? `${styles.out}` : `${styles.signUp}`}
@@ -47,11 +48,26 @@ const {handleLogin,handleSignOut,isAuth}= useAuthProvider()
   </div>
 </div>
 <div className={isMenuOpen?`${styles.show} ${styles.mobileMenu}`:`${styles.mobileMenu}`}>
-<Link className={styles.mobileLinks}  to={'/blogs'}>Blogs</Link>
-<Link className={styles.mobileLinks} to={'/popular'}>Popular</Link>
-<Link className={styles.mobileLinks} to={'/create'}>Create</Link>
-<Link className={styles.mobileLinks} to={'/signup'}>Sign Up</Link>
-<Link className={styles.mobileLinks} to={'/login'}>Log In</Link>
+<ul>
+            <li className={styles.mobileLinks} ><NavLink className={styles.navlink}  to={'/blogs'}>Blogs</NavLink></li>
+            <li className={styles.mobileLinks} ><NavLink className={styles.navlink} to={'/popular'}>Popular</NavLink></li>
+            <li className={styles.mobileLinks} ><NavLink className={styles.navlink}  to={'/create'}>Create</NavLink></li>
+            <li className={styles.mobileLinks} ><NavLink className={styles.navlink}  to={'/tasty-trades'}>Tasty Trades</NavLink></li>
+            <li className={styles.mobileLinks}><a
+              onClick={handleSignOut}
+              className={!isAuth ? `${styles.out}` : `${styles.signUp}`}
+            >
+              Sign Out
+            </a>
+          </li>
+          <li className={styles.mobileLinks} >
+            <a
+              className={isAuth ?` ${styles.out}` : `${styles.login}`}
+              onClick={handleLogin}
+            >
+              Log In
+              </a></li>
+        </ul>
 </div>
 
    </div>
