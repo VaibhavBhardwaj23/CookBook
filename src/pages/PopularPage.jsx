@@ -10,7 +10,6 @@ export default function PopularPage() {
     const [skip,setSkip]=useState(0)
     const result= useFetchPopular(skip)
 
-    console.log(result)
 
 const handlePagination=()=>
     {

@@ -4,7 +4,6 @@ import styled from "./UserRecipeCard.module.css"
 export default function UserRecipeDisplayCard({recipe}) {
   const {id,image,name,cuisine,difficulty,tags,prepTimeMinutes,servings} = recipe
 
-  console.log(id,image,name,cuisine,difficulty,tags,prepTimeMinutes,servings)
  return (
 <div>
   <Link className="link" to={`/tasty-trades/${id}`}>

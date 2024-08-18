@@ -8,7 +8,6 @@ import NavBar from "../components/NavBar";
 const BlogDetail = () => {
   const [posts, setPosts] = useState([]);
   const {slug} = useParams();
-  console.log(slug)
   useEffect(() => {
     
     const fetchPosts = async () => {
@@ -20,14 +19,12 @@ const BlogDetail = () => {
     fetchPosts();
   }, []);
 
-  console.log(posts)
 const result= posts.filter(post=>
 {
   return post.title==slug
 }
 )
 
-console.log(result)
   return (
     <div>
     <NavBar/>

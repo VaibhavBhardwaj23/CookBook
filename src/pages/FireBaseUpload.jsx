@@ -11,19 +11,15 @@ function FirebaseImageUpload() {
     if (img !== null) {
       const imgRef = ref(imageDb, `files/${v4()}`);
       uploadBytes(imgRef, img).then((value) => {
-        console.log(value);
         getDownloadURL(value.ref).then((url) => {
-          console.log(url);
           setImgUrl((data) => [...data, url]);
         });
       });
     }
-    console.log(imgUrl);
   };
 
   useEffect(() => {
     listAll(ref(imageDb, "files")).then((imgs) => {
-      console.log(imgs);
       imgs.items.forEach((val) => {
         getDownloadURL(val).then((url) => {
           setImgUrl((data) => [...data, url]);

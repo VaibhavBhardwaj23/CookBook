@@ -20,7 +20,6 @@ export default function UserRecipes() {
       }
       getUserRecipes();
     }, []);
-    console.log(userRecipes)
   return (
      <div>
          <NavBar/>

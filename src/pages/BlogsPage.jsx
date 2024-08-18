@@ -22,7 +22,6 @@ export default function BlogsPage() {
     }
     getPosts();
   }, []);
-console.log(posts)
   return (
     <>
       <PreLoader />

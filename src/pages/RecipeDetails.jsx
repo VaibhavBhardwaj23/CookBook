@@ -10,7 +10,6 @@ import PreLoader from "../components/PreLoader";
 export default function RecipeDetails() {
     const { slug } = useParams();
     const result= useSearch(slug);
-    console.log(result)
   return (
    <>
    <PreLoader/>

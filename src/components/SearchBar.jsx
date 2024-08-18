@@ -14,7 +14,6 @@ export default function SearchBar() {
     fetchRecipes()
   },[])
   
-  console.log(recipeList)
   return (
     <div className={styles.searchBar}>
 
