@@ -30,14 +30,14 @@ const [userDetail,setCurrentUserDetail]= useState()
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(() => {
         setIsAuth(true);
         localStorage.setItem("isAuth", JSON.stringify(true));
         window.location.reload();
         // Update the authentication state
       })
       .catch((error) => {
-        console.error("Error during login:", error);
+        window.alert("Error during login:", error);
       });
   };
 
